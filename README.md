@@ -19,6 +19,8 @@ la base de datos se llama trauma_database
 -- EJECUTA EN LA TERMINAL --
 php artisan key:generate
 
+php artisan migrate
+
 php artisan serve
 
 
