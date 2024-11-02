@@ -12,6 +12,8 @@
 -- Recuerda tener XAMPP --
 ACTIVA APACHE + Mysql
 
+la base de datos se llama trauma_database
+
 -- CLONA EL REPOSITORIO O DESCARGA EL RAR --
 
 -- EJECUTA EN LA TERMINAL --
