@@ -17,6 +17,7 @@ la base de datos se llama trauma_database
 -- CLONA EL REPOSITORIO O DESCARGA EL RAR --
 
 -- EJECUTA EN LA TERMINAL --
+
 php artisan key:generate
 
 php artisan migrate
