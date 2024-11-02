@@ -7,8 +7,14 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## -- INSTALACION --
+## ------ INSTALACION ------
 
+-- Recuerda tener XAMPP --
+ACTIVA APACHE + Mysql
+
+-- CLONA EL REPOSITORIO O DESCARGA EL RAR --
+
+-- EJECUTA EN LA TERMINAL --
 php artisan key:generate
 
 php artisan serve
