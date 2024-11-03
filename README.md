@@ -18,6 +18,10 @@ la base de datos se llama trauma_database
 
 -- EJECUTA EN LA TERMINAL --
 
+composer install
+
+copy .env.example .env
+
 php artisan key:generate
 
 php artisan migrate
