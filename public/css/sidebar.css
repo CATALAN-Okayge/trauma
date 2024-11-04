@@ -1,0 +1,65 @@
+/* public/css/sidebar.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #102030;
+    color: #ecf0f1;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar-logo img {
+    width: 120px;
+    margin-bottom: 30px;
+}
+
+.sidebar-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-link {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    color: #ecf0f1; /* Fijamos el color del texto a blanco */
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* Change only the background color on hover and fix text color to white */
+.sidebar-link:hover {
+    background-color: #0e2738;
+    color: #ecf0f1; /* Aseguramos que el texto permanezca blanco */
+}
+
+/* Content styling */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+}

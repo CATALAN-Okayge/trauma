@@ -5,34 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Emergencia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
 </head>
 <body>
 
-<div style="display: flex;">
-
-    <div style="width: 250px; background-color: #f4f4f4; padding: 20px; height: 100vh; position: fixed;">
-        
-        <div style="text-align: center; margin-bottom: 20px;">
-            <img src="{{ asset('imagenes/Logo_Hospital_de_Melipilla.png') }}" alt="Logo del Hospital" style="width: 100px; height: auto;">
+<div class="sidebar">
+        <div class="sidebar-logo">
+            <img src="{{ asset('imagenes/Logo_Hospital_de_Melipilla.png') }}" alt="Logo Hospital">
         </div>
-        
-       
-        <ul style="list-style: none; padding: 0;">
-            <li style="margin-bottom: 15px;">
-                <img src="{{ asset('path/to/icon.png') }}" alt="Icono Registro" style="width: 20px; height: auto; vertical-align: middle;">
-                <a href="{{ route('emergencias.index') }}" style="text-decoration: none; color: #333; font-weight: bold;">
-                    Registro de Emergencia
-                </a>
-            </li>
-            <li style="margin-top: 30px; font-weight: bold;">
-                Perfil del Doctor
-            </li>
-            
-            <li>{{ Auth::user()->name }}</li>
-        </ul>
-    </div>
-    
-
+        <div class="sidebar-menu">
+            <a href="{{ route('emergencias.index') }}" class="sidebar-link">Registro de Emergencia</a>
+            <!-- Puedes agregar más botones aquí cuando tengas nuevas vistas -->
+        </div>
 </div>
 
 

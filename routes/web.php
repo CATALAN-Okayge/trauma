@@ -13,3 +13,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/emergencias', [EmergenciaController::class, 'index'])->name('emergencias.index');
     Route::post('/emergencias', [EmergenciaController::class, 'store'])->name('emergencias.store');
 });
+
+
+
