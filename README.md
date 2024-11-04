@@ -21,7 +21,7 @@ la base de datos se llama trauma_database
 composer install
 npm install
 
-copy .env.example .env
+copy .env.example .env   -- si no existe .env , copia .env.example
 
 php artisan key:generate
 
