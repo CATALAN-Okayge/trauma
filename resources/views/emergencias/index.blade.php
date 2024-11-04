@@ -8,6 +8,34 @@
 </head>
 <body>
 
+<div style="display: flex;">
+
+    <div style="width: 250px; background-color: #f4f4f4; padding: 20px; height: 100vh; position: fixed;">
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="{{ asset('imagenes/Logo_Hospital_de_Melipilla.png') }}" alt="Logo del Hospital" style="width: 100px; height: auto;">
+        </div>
+        
+       
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 15px;">
+                <img src="{{ asset('path/to/icon.png') }}" alt="Icono Registro" style="width: 20px; height: auto; vertical-align: middle;">
+                <a href="{{ route('emergencias.index') }}" style="text-decoration: none; color: #333; font-weight: bold;">
+                    Registro de Emergencia
+                </a>
+            </li>
+            <li style="margin-top: 30px; font-weight: bold;">
+                Perfil del Doctor
+            </li>
+            
+            <li>{{ Auth::user()->name }}</li>
+        </ul>
+    </div>
+    
+
+</div>
+
+
 <div class="container mt-5">
     <h1 class="text-center mb-4">Registro de Emergencia</h1>
     <form action="{{ route('emergencias.store') }}" method="POST" class="p-4 border rounded bg-light shadow-sm">
