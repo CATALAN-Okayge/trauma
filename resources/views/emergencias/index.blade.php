@@ -8,8 +8,78 @@
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="{{ asset('js/sidebar.js') }}"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f8;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #102030;
+            color: #ecf0f1;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            transition: all 0.3s;
+        }
+        .sidebar-logo img {
+            width: 120px;
+            margin-bottom: 30px;
+        }
+        .sidebar-menu {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar-link {
+            width: 90%;
+            padding: 15px;
+            margin: 10px 0;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .sidebar-link:hover {
+            background-color: #0e2738;
+            color: #ecf0f1;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+            transition: margin-left 0.3s, width 0.3s;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+
+
 
 <div class="sidebar">
         <div class="sidebar-logo">
@@ -34,6 +104,14 @@
 
 
 <div class="container mt-5">
+    @if (session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
     <h1 class="text-center mb-4">Registro de Emergencia</h1>
     <form action="{{ route('emergencias.store') }}" method="POST" class="p-4 border rounded bg-light shadow-sm">
         @csrf
