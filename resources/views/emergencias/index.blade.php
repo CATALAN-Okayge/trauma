@@ -15,7 +15,17 @@
         </div>
         <div class="sidebar-menu">
             <a href="{{ route('emergencias.index') }}" class="sidebar-link">Registro de Emergencia</a>
-            <!-- Puedes agregar más botones aquí cuando tengas nuevas vistas -->
+            
+        </div>
+
+            
+        <div class="user-status">
+            <p>{{ Auth::user()->name }}</p>
+            <select id="status-selector" onchange="updateStatus()">
+                <option value="disponible">Disponible</option>
+                <option value="ocupado">Ocupado</option>
+                <option value="no disponible">No disponible</option>
+            </select>
         </div>
 </div>
 
