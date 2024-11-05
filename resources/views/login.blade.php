@@ -33,7 +33,7 @@
 <body>
     <div class="login-container">
       
-        <img src="/imagenes/Logo_Hospital_de_Melipilla.png" class="logo" alt="">
+        <img src="{{ asset('imagenes/Logo_Hospital_de_Melipilla.png') }}" class="logo" alt="">
         
         <h2 class="mb-4">Iniciar Sesión</h2>
     

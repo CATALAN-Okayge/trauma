@@ -6,6 +6,8 @@
     <title>Registro de Emergencia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="{{ asset('js/sidebar.js') }}"></script>
 </head>
 <body>
 
@@ -22,11 +24,12 @@
         <div class="user-status">
             <p>{{ Auth::user()->name }}</p>
             <select id="status-selector" onchange="updateStatus()">
-                <option value="disponible">Disponible</option>
-                <option value="ocupado">Ocupado</option>
-                <option value="no disponible">No disponible</option>
+                <option value="disponible" {{ Auth::user()->estado == 'disponible' ? 'selected' : '' }}>Disponible</option>
+                <option value="ocupado" {{ Auth::user()->estado == 'ocupado' ? 'selected' : '' }}>Ocupado</option>
+                <option value="no disponible" {{ Auth::user()->estado == 'no disponible' ? 'selected' : '' }}>No disponible</option>
             </select>
         </div>
+
 </div>
 
 

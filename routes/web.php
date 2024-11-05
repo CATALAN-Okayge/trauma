@@ -15,4 +15,11 @@ Route::middleware('auth')->group(function () {
 });
 
 
+Route::post('/update-status', function (Illuminate\Http\Request $request) {
+    $user = Auth::user();
+    $user->estado = $request->estado;
+    $user->save();
+
+    return response()->json(['success' => true]);
+})->name('update-status')->middleware('auth');
 
