@@ -27,6 +27,7 @@ copy .env.example .env   -- si no existe .env , copia .env.example
 php artisan key:generate
 
 php artisan migrate
+
 php artisan db:seed
 
 
