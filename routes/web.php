@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmergenciaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
@@ -26,4 +27,8 @@ Route::post('/update-status', function (Illuminate\Http\Request $request) {
 
     return response()->json(['success' => true]);
 })->name('update-status')->middleware('auth');
+
+
+
+Route::get('/estado', [UserController::class, 'getEstado'])->name('estado');
 

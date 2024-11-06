@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Emergencia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="{{ asset('js/sidebar.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <style>
         * {
             margin: 0;
